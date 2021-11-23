@@ -4,15 +4,6 @@ import requests
 import json
 import config
 
-  # Изучение и попытка прикрутить оплату QIWI
-s = requests.Session()
-s.headers['authorization'] = 'Bearer ' + config.QIWI_TOKEN
-parameters = {'rows': '50'}
-h = s.get('https://edge.qiwi.com/payment-history/v1/persons/'+ config.QIWI_ACCOUNT +'/payments', params = parameters)
-req = json.loads(h.text)
-
-print(req)  # Тест для прикручивания оплаты
-
 print('start')  # Разделитель
 
 bot = telebot.TeleBot(config.BOT)
