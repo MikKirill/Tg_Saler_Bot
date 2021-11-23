@@ -4,8 +4,6 @@ import requests
 import json
 import config
 
-print('start')  # Разделитель
-
 bot = telebot.TeleBot(config.BOT)
 
     #   Приветствие нового пользователя
